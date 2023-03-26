@@ -1,0 +1,125 @@
+.cabecalho-menu-hamburguer{
+    width: 35px;
+    height: 24px;
+    background-image: url("../assets/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho{
+    background-color:var(--cor-branco);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.container{
+   display: flex;
+   align-items: center;
+   
+
+}
+.container__imagem{
+    padding: 1em;
+}
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width : 60vw;
+    
+}
+.container-botao:checked~.lista-menu{
+    display: block;
+}
+.lista-menu__titulo,
+.lista-menu_item{
+    padding: 1em;
+    background-color: var(--cor-branco);
+
+}
+
+.lista-menu__titulo{
+   color: var(--cor-dorado);
+   font-weight: 700;
+}
+.lista-menu-link{
+    background: var(--cor-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    text-transform: uppercase;
+}
+.container-botao{
+    display: none;
+}
+
+.container-titulo{
+    display: none;
+}
+.opcoes{
+    display: none;
+}
+
+.container-texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+        .container-titulo, .container-titulo-negrito{
+            font-family: var(--font-secundaria);
+            font-size: 30px;
+        }
+        .container-titulo{
+            font-weight: 400;
+            display: block;
+        }
+
+        .container-titulo-negrito{
+            font-weight: 700;
+        }
+        .opcoes{
+            display:flex;
+        }
+        .opcoes-item{
+            padding: 0 1em;
+            
+        }
+        .opcoes-link{
+            text-decoration: none;
+            color: var(--cor-black);
+        }
+        .container-imagem-transparente{
+            display: none;
+        }
+        .cabecalho-menu-hamburguer{
+            display: none;
+        }
+        .opcoes-botao:checked~ .lista-menu{
+            display: block;
+            width: auto;
+        }
+        .opcoes-botao{
+            display: none;
+        }
+}
+
+@media screen and (min-width: 1728px){
+    .container-link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-black);
+    }
+    .cabecalho{
+        padding: 0.2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+    .container-texto{
+        display: block;
+    }
+}
